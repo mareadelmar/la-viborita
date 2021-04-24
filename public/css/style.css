@@ -1,0 +1,365 @@
+/* COLORES */
+
+.container-main,
+.container-arrows {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: #004369;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.container-home {
+    width: 100%;
+    height: 100%;
+}
+
+.home {
+    justify-content: center;
+}
+
+.container-flex {
+    width: 100%;
+    height: 90%;
+    flex-direction: column;
+}
+
+.container-nav {
+    width: 100%;
+}
+
+.container-title {
+    width: 50%;
+}
+
+.snake-icon {
+    width: 30px;
+    margin-bottom: -16px;
+    margin-left: -95px;
+}
+
+.nav-title {
+    text-align: left;
+    font-size: 28px;
+    margin: 16px 0 0 20px;
+    text-shadow: 2px 2px #333, 2px 2px #36eee0, 2px 2px #36eee0,
+        -2px -2px #36eee0;
+    color: #f652a0;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-list {
+    margin-right: 3%;
+    margin-top: 0;
+    width: 50%;
+    margin: 0px 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-item div {
+    justify-content: flex-end;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.nav-item div p {
+    font-size: 10px;
+    width: min-content;
+    color: #36eee0;
+    text-align: left;
+}
+
+.nav-item:hover #color-table {
+    display: block;
+}
+
+.nav-icono {
+    font-size: 24px;
+    color: #36eee0;
+    margin-right: 15px;
+    text-align: left;
+}
+
+#color-table {
+    display: none;
+    position: absolute;
+    *background-color: #f2f2f2;
+    *margin: 3px 0 0 50px;
+    border: 3px solid #f2f2f2;
+}
+
+.table-title {
+    font-size: 8px;
+}
+
+#color-table tbody tr td {
+    width: 30px;
+    height: 30px;
+}
+
+#scores-table {
+    width: 100%;
+}
+
+#scores-table table {
+    width: 100%;
+    flex-direction: column;
+}
+
+#scores-table table thead,
+#scores-table table tbody {
+    width: 80%;
+    border: 2px solid #333;
+}
+
+#scores-table table tr {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 10px 10px;
+    *border: 2px solid #333;
+}
+
+.swal2-title {
+    font-size: 20px;
+    margin: 12px 0 24px 0;
+    color: #004369;
+    *color: rgb(54, 238, 224, 0.7);
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: #f652a0;
+    font-size: 14px;
+    padding: 12px;
+    width: 120px;
+    box-shadow: inset -3px -3px #0a0a0a, inset 4px 4px #fff, inset 5px 5px gray,
+        inset -2px -2px #dfdfdf;
+}
+
+.home-player {
+    margin: 15px 0;
+    font-weight: bolder;
+    color: #36eee0;
+    font-size: 16px;
+}
+
+#player {
+    color: #333;
+}
+
+.btn-play {
+    background-color: #f652a0;
+    color: #f2f2f2;
+    border-radius: 7%;
+    margin: 15px 0;
+    font-size: 14px;
+    padding: 12px;
+    width: 120px;
+    font-family: "Press Start 2P", cursive;
+    box-shadow: inset -3px -3px #0a0a0a, inset 4px 4px #fff, inset 5px 5px gray,
+        inset -2px -2px #dfdfdf;
+}
+
+.container-main {
+    width: 100%;
+    height: 100%;
+}
+
+.main-info {
+    width: 500px;
+    justify-content: space-between;
+}
+
+.score,
+.playing-score,
+.player-name {
+    margin: 15px 0px;
+    color: #36eee0;
+}
+
+.container-canvas {
+    display: block;
+    width: 512px;
+    height: 512px;
+    border: 6px solid #333;
+}
+
+#canvas {
+    display: block;
+    margin: 0;
+    background: #bcece0;
+}
+
+.swal2-header {
+    padding: 0;
+}
+
+.swal2-image {
+    margin: 1.65em 0;
+}
+
+.swal2-confirm,
+.swal2-cancel {
+    font-size: 10px;
+    font-family: "Press Start 2P", cursive;
+    box-shadow: inset -3px -3px #0a0a0a, inset 4px 4px #fff, inset 5px 5px gray,
+        inset -2px -2px #dfdfdf;
+}
+
+.swal2-confirm {
+    background-color: #f652a0;
+    margin-right: 10px;
+    padding: 1.65em;
+}
+
+.swal2-cancel {
+    background-color: #999;
+    padding: 1.55em;
+}
+
+.container-arrows {
+    width: 100%;
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.arrow-up {
+    margin-bottom: 10px;
+}
+
+.arrow-rest,
+.arrow-up {
+    background: #f652a0;
+    width: 100px;
+    height: 66px;
+    font: initial;
+    border-radius: 10%;
+    box-shadow: inset -3px -3px #0a0a0a, inset 4px 4px #fff, inset 5px 5px gray,
+        inset -2px -2px #dfdfdf;
+    color: #36eee0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        height: 80vh;
+    }
+
+    .nav {
+        margin-right: 10%;
+        flex-direction: column;
+    }
+
+    .container-title {
+        width: 100%;
+    }
+
+    .nav-title {
+        font-size: 28px;
+        margin: 30px 0 0 20px;
+    }
+
+    .snake-icon {
+        width: 26px;
+        margin-bottom: -32px;
+        margin-left: -93px;
+    }
+
+    .nav-list {
+        width: 100%;
+        margin: 30px 16px 0 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-icono {
+        font-size: 20px;
+    }
+
+    .nav-item div {
+        justify-content: flex-start;
+        margin: 0 0 20px 0;
+    }
+
+    .nav-item div p {
+        text-align: left;
+    }
+
+    #color-table {
+        margin: 0 0 0 50px;
+    }
+
+    #scores-table table thead,
+    #scores-table table tbody {
+        width: 100%;
+    }
+
+    #scores-table table tr {
+        font-size: 16px;
+    }
+
+    .swal2-content {
+        padding: 0;
+    }
+
+    .container-flex {
+        height: 85%;
+    }
+
+    .home-player {
+        font-size: 16px;
+    }
+
+    .btn-play {
+        font-size: 14px;
+    }
+
+    .main-info {
+        width: 340px;
+    }
+
+    .container-canvas {
+        display: block;
+        width: 352px;
+        height: 352px;
+    }
+
+    #canvas {
+        width: 340px;
+        height: 340px;
+    }
+
+    .container-arrows {
+        display: block;
+    }
+
+    .swal2-confirm {
+        margin: 0 0 10px 0;
+    }
+}

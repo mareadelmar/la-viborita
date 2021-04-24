@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="juego, viborita, snake, culebra" />
+        <meta name="author" content="Mar Ortega" />
+        <meta name="robots" content="index follow" />
+
+        <!-- facebook -->
+        <meta property="og:title" content="La Viborita" />
+        <meta property="og:description" content="El juego clásico" />
+        <meta property="og:type" content="Juego" />
+        <meta
+            property="og:image"
+            content="https://la-viborita.web.app/img/hoytrasnoche-portada.jpeg/"
+        />
+        <meta property="og:url" content="https://la-viborita.web.app/" />
+
+        <!-- twitter -->
+        <meta property="twitter:title" content="La Viborita" />
+        <meta property="twitter:description" content="El juego clásico" />
+        <meta property="twitter:type" content="Juego" />
+        <meta
+            property="twitter:image"
+            content="https://la-viborita.web.app/img/hoytrasnoche-portada.jpeg/"
+        />
+        <meta property="twitter:url" content="https://la-viborita.web.app/" />
+
+        <title>La Viborita</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script
+            src="https://kit.fontawesome.com/8967c0963e.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="img/snake.svg" type="image/svg" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <section class="container-home">
+            <div class="container-nav">
+                <nav class="nav flex">
+                    <div class="flex container-title">
+                        <h1 class="nav-title">La Viborita</h1>
+                        <img
+                            src="img/snake.svg"
+                            alt="snake"
+                            class="snake-icon"
+                        />
+                    </div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <div class="flex">
+                                <i class="fas fa-paint-brush nav-icono"></i>
+                                <p>color viborita</p>
+                            </div>
+                            <div id="color-table">
+                                <table>
+                                    <!-- <thead>
+                                        <tr>
+                                            <td class="table-title" colspan="3">
+                                                color viborita:
+                                            </td>
+                                        </tr>
+                                    </thead> -->
+                                    <tbody>
+                                        <tr>
+                                            <td
+                                                style="
+                                                    background-color: rgb(
+                                                        98,
+                                                        0,
+                                                        234
+                                                    );
+                                                "
+                                            ></td>
+                                            <td
+                                                style="
+                                                    background-color: rgb(
+                                                        48,
+                                                        79,
+                                                        254
+                                                    );
+                                                "
+                                            ></td>
+                                            <td
+                                                style="
+                                                    background-color: rgb(
+                                                        0,
+                                                        191,
+                                                        165
+                                                    );
+                                                "
+                                            ></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                style="
+                                                    background-color: rgb(
+                                                        0,
+                                                        200,
+                                                        83
+                                                    );
+                                                "
+                                            ></td>
+                                            <td
+                                                style="
+                                                    background-color: rgb(
+                                                        255,
+                                                        171,
+                                                        0
+                                                    );
+                                                "
+                                            ></td>
+                                            <td
+                                                style="
+                                                    background-color: rgb(
+                                                        191,
+                                                        54,
+                                                        12
+                                                    );
+                                                "
+                                            ></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                style="
+                                                    background-color: rgb(
+                                                        183,
+                                                        28,
+                                                        28
+                                                    );
+                                                "
+                                            ></td>
+                                            <td
+                                                style="
+                                                    background-color: rgb(
+                                                        255,
+                                                        82,
+                                                        82
+                                                    );
+                                                "
+                                            ></td>
+                                            <td
+                                                style="
+                                                    background-color: rgb(
+                                                        233,
+                                                        30,
+                                                        99
+                                                    );
+                                                "
+                                            ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                        <li class="nav-item" id="show-table">
+                            <div class="flex">
+                                <i class="fas fa-medal nav-icono"></i>
+                                <p>tabla scores</p>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <form class="flex container-flex home">
+                <label for="player" class="home-player">Participante:</label>
+                <input
+                    type="text"
+                    id="player"
+                    class="home-player"
+                    placeholder="Desconocidx"
+                    maxlength="11"
+                />
+                <button type="submit" class="btn-play">JUGAR</button>
+            </form>
+        </section>
+        <section class="container-main">
+            <div class="flex container-flex">
+                <div class="main-info flex">
+                    <h5 class="player-name"></h5>
+                    <h5 class="score">
+                        SCORE:<span class="playing-score"></span>
+                    </h5>
+                </div>
+                <div class="container-canvas">
+                    <canvas
+                        id="canvas"
+                        height="500"
+                        width="500"
+                        style="background-color: #bcece0"
+                    ></canvas>
+                </div>
+                <div class="container-arrows">
+                    <div class="arrows">
+                        <div>
+                            <button type="button" class="arrow-up">
+                                &#9650;
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="arrow-rest">
+                                &#9664;
+                            </button>
+                            <button type="button" class="arrow-rest">
+                                &#9660;
+                            </button>
+                            <button type="button" class="arrow-rest">
+                                &#9654;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+        <script src="scripts/fconfig.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
